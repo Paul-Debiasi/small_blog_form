@@ -1,0 +1,46 @@
+.SinglePost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  h4 {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    // border-bottom: 4px solid rgb(179, 180, 168);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 3px 0px;
+    align-self: center;
+    span {
+      color: rgb(0, 26, 0);
+    }
+  }
+
+  p {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    text-align: left;
+    line-height: 2.4rem;
+  }
+  span {
+    grid-column: 2 /3;
+    grid-row: 3;
+    align-self: center;
+  }
+
+  img {
+    height: 150px;
+    align-self: center;
+    justify-self: center;
+  }
+
+  button {
+    width: 150px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 3/ 4;
+    grid-row: 3;
+    border: 4px solid white;
+  }
+}

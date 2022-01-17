@@ -1,0 +1,45 @@
+.FormDiv {
+  font-size: 22px;
+
+  label {
+    display: inline-block;
+    margin-right: 8px;
+    background: white;
+    color: black;
+  }
+  input,
+  textarea {
+    // width: 100%;
+    flex-grow: 1;
+    margin-right: 50px;
+    border: none;
+    font-size: 18px;
+    padding: 4px;
+    outline: none;
+    &::placeholder {
+      padding: 4px;
+    }
+    &:focus {
+      outline: 2px solid rgba(0, 110, 0, 0.45);
+    }
+  }
+
+  input {
+    height: 40px;
+  }
+}
+.FormBtn {
+  width: 200px;
+  margin-left: 50px;
+  //   display: inline-block;
+  height: 40px;
+  font-size: 22px;
+  border: none;
+  background: white;
+  margin-bottom: 22px;
+}
+
+.Toast {
+  // background-color: rgba(2, 2, 2, 0.294);
+  color: black;
+}
