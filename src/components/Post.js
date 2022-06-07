@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   MDBCard,
@@ -10,7 +9,7 @@ import {
   MDBCol,
 } from "mdb-react-ui-kit";
 
-export default function App({
+export default function Post({
   content,
   image,
   id,
@@ -23,7 +22,7 @@ export default function App({
     <MDBCard style={{ maxWidth: "440px" }}>
       <MDBRow className="g-0">
         <MDBCol md="4">
-          <MDBCardImage src={image} alt="..." fluid />
+          <Link to={`/posts/post/${id}`}> <MDBCardImage src={image} alt="..." fluid /></Link>
         </MDBCol>
         <MDBCol md="8">
           <MDBCardBody>
@@ -32,7 +31,7 @@ export default function App({
               {content?.length > 20 ? (
                 <>
                   {content.substring(0, 5)}
-                  <Link to={`/posts/post/${id}`}>more </Link>
+                  <Link to={`/posts/post/${id}`}> ....more </Link>
                 </>
               ) : (
                 content

@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import Post from "./Post";
-import moment from "moment";
+
 
 export default function ShowCurrent({ posts, removePost }) {
   return (

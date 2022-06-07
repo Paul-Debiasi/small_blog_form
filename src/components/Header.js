@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavHeader = styled.div`
@@ -15,11 +15,8 @@ const NavHeader = styled.div`
 export default function Header() {
   return (
     <NavHeader className="Header">
-      <Link to="/">
-        <div className="Header-div">Home</div>
-      </Link>
       <ul>
-        <Link to="/post">
+        <Link to="/">
           <li>Create Post</li>
         </Link>
         <Link to="/posts">

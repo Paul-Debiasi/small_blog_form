@@ -17,8 +17,7 @@ const DivCont = styled.div`
 `;
 
 export default function SinglePost({ username, title, content, image, time }) {
-  // let newPost = eval(props);
-  // console.log(`Single Post Props: ${newPost}`);
+
 
   const history = useHistory();
   return (
