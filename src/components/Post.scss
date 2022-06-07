@@ -1,0 +1,43 @@
+.postCard{
+    margin: 15px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    .headerCard{
+        display:flex;
+        align-items: center;
+        height:40%;
+        background: rgb(145, 196, 52);
+        h4{
+            margin-left: 8px;
+            color: white;
+        }
+        img{
+            height: 120px;
+        }
+    }
+    .bodyCard{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:60%;
+        p{
+            font-size: 18px;
+            text-align:start;
+            padding: 6px;
+            max-width: 100%;
+        }
+        a{
+            color:rgb(145, 196, 52);
+        }
+        button{
+            background: black;
+            color:white;
+            font-size: 22px;
+            border:none;
+            &:hover{
+                background:rgb(145, 196, 52);
+                color: black;
+            }
+        }
+    }
+}

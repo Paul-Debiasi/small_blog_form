@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import BikeLeasing from '../images/Bikeleasing.png'
 
 const NavHeader = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ const NavHeader = styled.div`
 export default function Header() {
   return (
     <NavHeader className="Header">
+      <img src={BikeLeasing} alt="BikeLeasing Logo" />
       <ul>
         <Link to="/">
           <li>Create Post</li>

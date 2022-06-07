@@ -7,7 +7,7 @@ import styled from "styled-components";
 const DivCont = styled.div`
 	display: grid;
 	background: white;
-	width: 45%;
+	width: 35%;
 	height: 55%;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(2, 1fr);
@@ -25,7 +25,7 @@ export default function SinglePost({ username, title, content, image, time }) {
 			<DivCont>
 				<div className='imgContainer'>
 					<img src={image} alt={`${username}`} />
-					<span>{`${time}, ${title}`}</span>
+					<span>{time} - <span className='titleSpan'>{title}</span></span>
 				</div>
 				<p>{content}</p>
 				<button onClick={() => history.goBack()}>Back</button>
