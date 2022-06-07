@@ -1,7 +1,6 @@
 import React from "react";
-import "./SinglePost.scss";
 import { useHistory } from "react-router-dom";
-
+import "./SinglePost.scss";
 import styled from "styled-components";
 
 const DivCont = styled.div`
@@ -16,16 +15,19 @@ const DivCont = styled.div`
 	box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 `;
 
-export default function SinglePost({ username, title, content, image, time }) {
+export default function SinglePost(selectedPostData) {
+	//Getting the post object through params route base on the id 
+	const { content, image, time, title, username } = selectedPostData;
+	const history = useHistory();
 
-
-  const history = useHistory();
-  return (
+	return (
 		<div className='SinglePost'>
 			<DivCont>
 				<div className='imgContainer'>
 					<img src={image} alt={`${username}`} />
-					<span>{time} - <span className='titleSpan'>{title}</span></span>
+					<span>
+						{time} - <span className='titleSpan'>{title}</span>
+					</span>
 				</div>
 				<p>{content}</p>
 				<button onClick={() => history.goBack()}>Back</button>

@@ -1,31 +1,40 @@
 .Header {
-  a {
-    text-decoration: none;
+	a {
+		text-decoration: none;
 
-    color: #fff;
-    &:active {
-      color: red;
-    }
-    &:visited {
-      text-decoration: underline;
-      font-size: 80px;
-    }
+		color: #fff;
+		&:active {
+			color: red;
+		}
+		&:visited {
+			text-decoration: underline;
+			font-size: 80px;
+		}
 
-    .Header-div {
-      font-size: 22px;
-    }
-  }
+		.Header-div {
+			font-size: 22px;
+		}
+	}
 
-  ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-    padding: 0;
-    align-items: center;
-    height: 100%;
-    a {
-      font-size: 20px;
-    }
-  }
+	ul {
+		list-style-type: none;
+		display: flex;
+		justify-content: space-evenly;
+		width: 50%;
+		padding: 0;
+		margin: 0;
+		align-items: center;
+		height: 100%;
+		a {
+			font-size: 20px;
+			&:hover {
+				color: rgb(145, 196, 52);
+				border-bottom: 2px solid rgb(145, 196, 52);
+			}
+			li {
+				text-transform: uppercase;
+				height: 100%;
+			}
+		}
+	}
 }

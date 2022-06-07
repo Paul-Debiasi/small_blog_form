@@ -16,7 +16,7 @@ const NavHeader = styled.div`
 export default function Header() {
   return (
     <NavHeader className="Header">
-      <img src={BikeLeasing} alt="BikeLeasing Logo" />
+    <Link to="/"><img src={BikeLeasing} alt="BikeLeasing Logo" /></Link>  
       <ul>
         <Link to="/">
           <li>Create Post</li>

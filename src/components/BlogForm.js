@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { BlogContext } from "../utils/Context";
 
 const Form = styled.form`
 	background: rgb(145, 196, 52);
@@ -26,18 +28,18 @@ const FormDiv = styled.div`
 	width: 100%;
 `;
 
-export default function BlogForm({ addPost }) {
-	const history = useHistory();
+export default function BlogForm() {
 
+	const { addPost } = useContext(BlogContext);
+	const history = useHistory();
+	// Creating my form data obj
 	const [formData, setFormData] = useState({
 		user: "",
 		title: "",
 		content: "",
 	});
-
-
 	const [message] = useState("Please fill out all inputs...");
-
+	// A library that allow to and error message if not all the field are complete 
 	const notify = () => {
 		toast.error(message, {
 			position: "bottom-right",
@@ -49,7 +51,7 @@ export default function BlogForm({ addPost }) {
 			progress: undefined,
 		});
 	};
-
+	//Handling submit, if all the field are complete, I'm pushing the user to the posts router 
 	const handleSubmit = (e) => {
 		const { user, title, content } = formData;
 		e.preventDefault();

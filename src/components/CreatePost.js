@@ -7,10 +7,10 @@ const FormCont = styled.div`
   width: 100%;
 `;
 
-export default function CreatePost({ addPost }) {
+export default function CreatePost() {
   return (
     <FormCont>
-      <BlogForm addPost={addPost} />
+      <BlogForm  />
     </FormCont>
   );
 }
