@@ -11,7 +11,7 @@
     
 - UI :
     - Scss for the style && styled components
-    - The UI is inspired by BIKELEASING  official web page. I used company color the create continuity in the page, in the same way, font-family, company Logo.
+    - The UI is inspired by the official web page. I used company color the create continuity in the page, in the same way, font-family, company Logo.
 
 - Routing :
     - React router dom 5.3
