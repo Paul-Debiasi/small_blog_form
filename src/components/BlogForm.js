@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 
 const Form = styled.form`
-	background: rgba(0, 0, 0, 0.6);
+	background: rgb(145, 196, 52);
 	display: flex;
 	background-size: cover;
 	flex-direction: column;
@@ -64,17 +64,16 @@ export default function BlogForm({ addPost }) {
 		<>
 			<Form onSubmit={handleSubmit}>
 				<FormDiv className='FormDiv'>
-					<label htmlFor='username'>Username :</label>
 					<input
 						onChange={(e) => setFormData({ ...formData, user: e.target.value })}
 						value={formData.user}
 						id='username'
 						type='text'
 						placeholder='Username'
+						autoComplete='off'
 					/>
 				</FormDiv>
 				<FormDiv className='FormDiv'>
-					<label htmlFor='title'>Title :</label>
 					<input
 						onChange={(e) =>
 							setFormData({ ...formData, title: e.target.value })
@@ -86,7 +85,6 @@ export default function BlogForm({ addPost }) {
 					/>
 				</FormDiv>
 				<FormDiv className='FormDiv'>
-					<label htmlFor='content'>Content :</label>
 					<textarea
 						onChange={(e) =>
 							setFormData({ ...formData, content: e.target.value })
@@ -99,9 +97,11 @@ export default function BlogForm({ addPost }) {
 						placeholder='Content'
 					/>
 				</FormDiv>
-				<button className='FormBtn' type='submit'>
-					Submit
-				</button>
+				<div className='btnContainer'>
+					<button className='FormBtn' type='submit'>
+						Submit
+					</button>
+				</div>
 			</Form>
 			<ToastContainer theme='theme' className='Toast' />
 		</>

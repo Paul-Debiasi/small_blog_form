@@ -11,7 +11,10 @@ import moment from "moment";
 
 function App() {
   // const location = useLocation();
-  const time = moment().format("LLLL");
+  const time = moment().format("LL - hh:mm:ss");
+  console.log(moment().format())
+     moment.locale("de");
+			console.log(moment().format("LL"));
 
   const initialPosts = JSON.parse(window.localStorage.getItem("posts") || "[]");
   const [posts, setPost] = useState(initialPosts);

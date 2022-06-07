@@ -1,45 +1,49 @@
 .FormDiv {
-  font-size: 22px;
+	font-size: 22px;
 
-  label {
-    display: inline-block;
-    margin-right: 8px;
-    background: white;
-    color: black;
-  }
-  input,
-  textarea {
-    // width: 100%;
-    flex-grow: 1;
-    margin-right: 50px;
-    border: none;
-    font-size: 18px;
+	label {
+		display: block;
+		margin-right: 8px;
+		background: white;
+		color: black;
+		padding-right: 4px;
+    border-radius: 2px;
+	}
+	input,
+	textarea {
+		flex-grow: 1;
+		margin-right: 50px;
+		border: none;
+		font-size: 18px;
+		outline: none;
+    border-radius: 2px;
     padding: 4px;
-    outline: none;
-    &::placeholder {
-      padding: 4px;
-    }
-    &:focus {
-      outline: 2px solid rgba(0, 110, 0, 0.45);
-    }
-  }
+		&::placeholder {
+			padding: 4px;
+			font-size: 18px;
+		}
+		&:focus {
+			outline: 2px solid black;
+		}
+	}
 
-  input {
-    height: 40px;
-  }
+	input {
+		height: 40px;
+	}
 }
 .FormBtn {
-  width: 200px;
-  margin-left: 50px;
-  //   display: inline-block;
-  height: 40px;
-  font-size: 22px;
-  border: none;
-  background: white;
-  margin-bottom: 22px;
+	width: 200px;
+	height: 40px;
+	font-size: 22px;
+	border: none;
+	background: white;
+	margin-bottom: 22px;
+	&:hover {
+		background: black;
+		color: white;
+	}
 }
 
 .Toast {
-  // background-color: rgba(2, 2, 2, 0.294);
-  color: black;
+	color: black;
 }

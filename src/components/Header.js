@@ -9,7 +9,7 @@ const NavHeader = styled.div`
   justify-content: space-evenly;
   width: 100%;
   height: 100px;
-  background-color: rgb(72, 111, 112);
+  background-color: black;
 `;
 
 export default function Header() {
